@@ -16,12 +16,7 @@ public class RollBallsTest {
     public void setUp() throws Exception{
         g=new BowlingGame();
     }
-    @Test
-    public void roll0_20() throws Exception {
-        Roll(0,20);
-        assertEquals(0, g.score());
 
-    }
 
 
     private void Roll(int pin,int times) {
@@ -29,6 +24,16 @@ public class RollBallsTest {
             g.roll(pin);
     }
 
+    @Test
+    public void roll0_20() throws Exception {
+        Roll(0,20);
+        assertEquals(0, g.score());
 
+    }
+    @Test
+    public void roll2_20() throws Exception {
+        Roll(2,20);
+        assertEquals(40, g.score());
 
+    }
 }
