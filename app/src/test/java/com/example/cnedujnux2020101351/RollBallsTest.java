@@ -58,4 +58,10 @@ public class RollBallsTest {
     private void rollStrike() {
         g.roll(10);
     }
+
+    @Test
+    public void testPerfectGame() throws Exception {
+        Roll(10,12);
+        assertEquals(300, g.score());
+    }
 }
