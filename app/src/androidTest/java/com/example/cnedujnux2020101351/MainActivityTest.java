@@ -69,7 +69,7 @@ public class MainActivityTest {
         materialButton.perform(click());
 
         ViewInteraction textView = onView(
-                allOf(withId(R.id.textview_score), withText("Total score is"),
+                allOf(withId(R.id.textview_score), withText("Total score is49"),
                         withParent(withParent(withId(android.R.id.content))),
                         isDisplayed()));
         textView.check(matches(withText("Total score is49")));
